@@ -13,22 +13,27 @@ body {
 
 header {
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
-    width: 100%;
-    height: var(--header-height-mobile);
-    color: var(--header-text-color);
     overflow: hidden;
-    padding: 28px 33px 56px 33px;
-    .headingWrapper {
-        h1 {
-            font-family: Mulish;
-            font-weight: 900;
-            font-style: normal;
-            font-size: 30px;
-            text-align: center;
+    
+    .headerContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        width: 100%;
+        height: var(--header-height-mobile);
+        color: var(--header-text-color);
+        padding: 28px 33px 56px 33px;
+        .headingWrapper {
+            width: 100%;
+            h1 {
+                font-family: Mulish;
+                font-weight: 900;
+                font-style: normal;
+                font-size: 30px;
+                text-align: center;
+                line-height: 45px;
+            }
         }
     }
     .backgroundGradient {
@@ -48,10 +53,16 @@ main {
     height: 100%;
 }
 
-.buttonWrapper {
+.buttonWrapper,
+.logoWrapper {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.logoWrapper {
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .auditBtn {
@@ -76,5 +87,52 @@ main {
         min-height: 72px;
         margin: 0 auto;
         font-size: 20px;
+    }
+}
+
+
+
+//-------------------------------------//
+//----------- @ MEDIA -----------------//
+//-------------------------------------//
+
+
+@media screen and  (min-width: 1000px) {
+    header {
+        .headerContent {
+            flex-wrap: wrap;
+            flex-direction: row;
+            height: var(--header-height-desktop);
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 61px 33px 56px 33px;
+            .logoWrapper {
+                order: 1;
+                width: calc(100% / 2);
+            }
+            .buttonWrapper {
+                order: 2;
+                width: calc(100% / 2 );
+                justify-content: flex-end;
+                align-items: flex-start;
+            }
+            .headingWrapper {
+                order: 3;
+                width: 100%;
+                h1 {
+                    display: block;
+                    max-width: 720px;
+                    margin: 0 auto;
+                    font-size: 50px;
+                    line-height: 80px;
+                    br {
+                        display: none;
+                    }
+                }
+            }
+
+        }
+
+
     }
 }
