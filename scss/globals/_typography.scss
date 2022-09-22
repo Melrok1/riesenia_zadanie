@@ -110,3 +110,31 @@
     font-weight: 600;
 }
 
+
+
+
+
+.underliningSpan {
+    position: relative;
+}
+
+.underliningSpan::before {
+    position: absolute;
+    content: '';
+    bottom: -9px;
+    left: 0;
+    width: 100%;
+    height: 14px;
+    background: var(--main-text-underline-color);
+    opacity: 0.2;
+}
+
+.strongSpan {
+    font-weight: 800;
+}
+
+.readMoreSpan {
+    color: var(--main-text-second-color);
+    font-weight: 700;
+    cursor: pointer;
+}

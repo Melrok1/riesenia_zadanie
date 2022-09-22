@@ -9,6 +9,8 @@ body {
     background: #fff;
     width: 100%;
     min-height: 100vh;
+    font-family: 'Mulish';
+    -webkit-font-smoothing: antialiased;
 }
 
 header {
@@ -51,7 +53,160 @@ main {
     width: 100%;
     padding: 0 30px;
     height: 100%;
+    color: var(--main-text-color);
+    .partnerImgWrapper {
+        margin-top: 53px;
+        margin-bottom: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        img {
+            width: calc(100% / 2 - 10px);
+            max-width: 175px;
+        }
+    }
+    h3 {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 32px;
+        line-height: 44px;
+        margin-bottom: 40px;
+    }
+    p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 40px;
+    }
+    ul {
+        margin: 60px 0;
+        li {
+            position: relative;
+            list-style-type: none;
+            padding: 0 20px 0 50px;
+            margin-bottom: 30px;
+            &::after {
+                position: absolute;
+                content: '';
+                top: 8px;
+                left: 0;
+                width: 24px;
+                height: 24px;
+                background-image: url('../../assets/svg/okCircle.svg');
+            }
+            p {                
+                font-style: normal;
+                font-weight: 600;
+                font-size: 18px;
+                line-height: 27px;
+            }
+        }
+    }
+    ol {
+        li {
+            position: relative;
+            list-style-type: none;
+            margin-left: 80px;
+            &:nth-child(1)::after,
+            &:nth-child(2)::after,
+            &:nth-child(3)::after,
+            &:nth-child(4)::after {
+                position: absolute;
+                content: '';
+                top: 15px;
+                left: -90px;
+                width: 62px;
+                height: 75px;
+            }
+            &:nth-child(1)::after {
+                background-image: url('../../assets/svg/1.svg');
+            }
+            &:nth-child(2)::after {
+                background-image: url('../../assets/svg/2.svg');
+            }
+            &:nth-child(3)::after {
+                background-image: url('../../assets/svg/3.svg');
+            }
+            &:nth-child(4)::after {
+                background-image: url('../../assets/svg/4.svg');
+            }
+            h4 {
+                font-style: normal;
+                font-weight: 900;
+                font-size: 24px;
+                line-height: 30px;
+                margin-bottom: 10px;
+            }
+            p {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 28px;
+                margin-bottom: 55px;
+            }
+        }
+    }
+    .quoteBlock {
+        .quote {
+            position: relative;
+            padding: 32px 19px 32px 28px;
+            border: 1px solid var(--main-quoteBlock-border-color);
+            margin-bottom: 25px;
+            &::after {
+                position: absolute;
+                content: '';
+                top: -27px;
+                left: 30px;
+                width: 43px;
+                height: 35px;
+                background-image: url('../../assets/svg/quotationMarks.svg');
+            }
+            p {
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 32px;
+            }
+        }
+        .authorOfTheQuote {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 82px;
+            img {
+                width: 64px;
+                height: 64px;
+                margin-right: 21px;
+            }
+            .authorinitials {
+                .quoteAuthorName {
+                    font-style: normal;
+                    font-weight: 900;
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+                .quoteAuthorPosition {
+                    display: inline-block;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+                .quoteAuthorCompany {
+                    display: inline-block;
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 22px;
+                    color: var(--main-text-second-color);
+                }
+            }
+        }
+    }
 }
+
 
 .buttonWrapper,
 .logoWrapper {
@@ -85,11 +240,10 @@ main {
         width: 100%;
         max-width: 380px;
         min-height: 72px;
-        margin: 0 auto;
+        margin: 92px auto;
         font-size: 20px;
     }
 }
-
 
 
 //-------------------------------------//
